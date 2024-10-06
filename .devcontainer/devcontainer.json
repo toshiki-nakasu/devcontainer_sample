@@ -1,0 +1,69 @@
+{
+    // # devcontainer.json sample
+    // recommend: Do not sort json
+    // ## To create image
+    "name": "mySample",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+
+    // ## From base image
+    "dockerComposeFile": ["./compose.yaml"],
+    "service": "ubuntu",
+    "runServices": [],
+
+    // ## Resources
+    // warning: Can not use Env
+    "mounts": [
+        {
+            "type": "bind",
+            "source": "${localWorkspaceFolder}",
+            "target": "${containerWorkspaceFolder}",
+            "consistency": "delegated"
+        }
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "username": "developer"
+        },
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+
+    // ## Environment
+    "remoteUser": "developer",
+    "containerEnv": {
+        "scriptFolder": "${containerWorkspaceFolder}/.devcontainer/script"
+    },
+    "remoteEnv": {},
+    "portsAttributes": { "80": { "label": "http", "onAutoForward": "silent" } },
+
+    // ## Container command
+    // warning: To use .sh you need mount
+    // info: key is output stage
+    "overrideCommand": true,
+    "initializeCommand": {
+        "Step": "echo [INFO] initializeCommand"
+    },
+    "onCreateCommand": {
+        "Step": "sh ${containerEnv:scriptFolder}/sample.sh onCreateCommand"
+    },
+    "updateContentCommand": {
+        "Step": "sh ${containerEnv:scriptFolder}/sample.sh updateContentCommand"
+    },
+    "postCreateCommand": {
+        "Step": "sh ${containerEnv:scriptFolder}/sample.sh postCreateCommand"
+    },
+    "postStartCommand": {
+        "Step": "sh ${containerEnv:scriptFolder}/sample.sh postStartCommand"
+    },
+    "postAttachCommand": {
+        "Step": "sh ${containerEnv:scriptFolder}/sample.sh postAttachCommand"
+    },
+
+    // IDE
+    "customizations": {
+        "vscode": {
+            "extensions": [],
+            "settings": {}
+        }
+    }
+}
