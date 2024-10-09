@@ -1,28 +1,7 @@
 {
     "recommendations": [
-        "davidanson.vscode-markdownlint",
-        "donjayamanne.githistory",
-        "dotjoshjohnson.xml",
-        "dracula-theme.theme-dracula",
-        "eamodio.gitlens",
-        "esbenp.prettier-vscode",
-        "foxundermoon.shell-format",
-        "github.remotehub",
-        "gruntfuggly.todo-tree",
-        "hediet.vscode-drawio",
-        "humao.rest-client",
-        "ibm.output-colorizer",
         "ms-ceintl.vscode-language-pack-ja",
-        "ms-vscode.azure-repos",
-        "ms-vscode.powershell",
-        "ms-vscode.remote-repositories",
-        "ms-vsliveshare.vsliveshare",
-        "shardulm94.trailing-spaces",
-        "shd101wyy.markdown-preview-enhanced",
-        "streetsidesoftware.code-spell-checker",
-        "thinker.sort-json",
-        "visualstudioexptteam.intellicode-api-usage-examples",
-        "visualstudioexptteam.vscodeintellicode",
-        "wmaurer.change-case"
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode-remote.remote-wsl"
     ]
 }
