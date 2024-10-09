@@ -59,7 +59,7 @@
         "Step": "sh ${containerEnv:scriptFolder}/sample.sh postAttachCommand"
     },
 
-    // IDE
+    // ## IDE
     "customizations": {
         "vscode": {
             "extensions": [],
